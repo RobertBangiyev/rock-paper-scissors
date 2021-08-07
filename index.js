@@ -29,7 +29,7 @@ function game() {
         } else if(result.substring(0, result.indexOf('!')) == 'You Lose') {
             computerScore++;
         }
-        console.log(`${result} \n Player: ${playerScore} Computer: ${computerScore}`);
+        alert(`${result} \n Player: ${playerScore} Computer: ${computerScore}`);
     }
     let winner;
     if(playerScore > computerScore) {
@@ -39,6 +39,6 @@ function game() {
     } else {
         winner = 'No one';
     }
-    console.log(`${winner} has won the game!`);
+    alert(`${winner} has won the game!`);
 }
 game();
