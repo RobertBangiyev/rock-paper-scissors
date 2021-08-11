@@ -1,0 +1,46 @@
+body {
+    background-color: #f6f6f6;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+p {
+    text-align: center;
+}
+img {
+    border-color: black;
+    border-style: solid;
+    border-width: 0.1px;
+    padding: 0;
+    border-radius: 10px;
+    margin: 5px;
+}
+.active:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#rock {
+    width: 200px;
+    padding-top: 37px;
+    padding-bottom: 10px;
+}
+#paper {
+    width: 200px;
+    padding-bottom: 5px;
+}
+#scissors {
+    height: 220px;
+}
+#imgs {
+    text-align: center;
+    padding-top: 20px;
+}
+button {
+    margin: 0 auto;
+    display: block;
+}
+#hide {
+    display: none;
+}
