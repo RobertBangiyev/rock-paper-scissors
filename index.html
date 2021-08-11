@@ -3,9 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <script src="index.js">
-        </script>
+        <h1>Rock Paper Scissors</h1>
+        <p>Choose wisely, for whoever reaches 5 points first shall rule the world</p>
+        <div id="imgs">
+            <img class="active" id="rock" src="https://www.seekpng.com/png/detail/816-8161371_rock-paper-scissor-icon-png.png" alt="Rock">
+            <img class="active" id="paper" src="https://www.pngkey.com/png/detail/816-8161571_transparent-rock-paper-scissors-png.png" alt="Paper">
+            <img class="active" id="scissors" src="scissors.png" alt="Scissors">
+        </div>
+        <p id="result"></p>
+        <p id="computerScore">Computer: 0</p>
+        <p id="playerScore">Player: 0</p>
+        <p id="game-end"></p>
+        <p id="restart"></p>
+        <button id='hide'>Yes</button>
     </body>
 </html>
