@@ -1,46 +1,126 @@
 body {
-    background-color: #f6f6f6;
+    background-color: #0077ca;
+    margin: 0;
 }
-
+header {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
 h1 {
     text-align: center;
     margin-bottom: 5px;
+    color: #ffa600;
+    text-shadow: 1px 1px 1px black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#top {
+    color: #ffa600;
+    text-shadow: 1px 1px 1px black;
 }
 p {
     text-align: center;
+    color: white;
 }
 img {
-    border-color: black;
+    border-color: #ffa600;
     border-style: solid;
-    border-width: 0.1px;
+    border-width: 5px;
     padding: 0;
     border-radius: 10px;
     margin: 5px;
 }
+/* #center {
+    border-color: #ffa600;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 700px;
+} */
 .active:hover {
     transform: scale(1.1);
     cursor: pointer;
+    box-shadow: 0 0 5px #ffa600;
 }
 #rock {
-    width: 200px;
+    width: 30%;
+    max-width: 200px;
+    min-width: 110px;
     padding-top: 37px;
     padding-bottom: 10px;
+    background-color: #f6f6f6;
 }
 #paper {
-    width: 200px;
+    width: 30%;
+    max-width: 200px;
+    min-width: 110px;
     padding-bottom: 5px;
+    background-color: #f6f6f6;
 }
 #scissors {
-    height: 220px;
+    width: 30%;
+    max-width: 165px;
+    min-width: 110px;
+    background-color: #f6f6f6;
 }
 #imgs {
     text-align: center;
     padding-top: 20px;
+    margin-bottom: 10px;
 }
 button {
     margin: 0 auto;
     display: block;
+    background-color: #ffa600;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 #hide {
     display: none;
+}
+#result {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#game-end {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+@media (max-width: 640px) {
+    #rock {
+        padding-top: 40px;
+        padding-bottom: 18px;
+    }
+    #paper {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 590px) {
+    #rock {
+        padding-top: 45px;
+        padding-bottom: 20px;
+    }
+    #paper {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+@media (max-width: 445px) {
+    #rock {
+        padding-top: 45px;
+        padding-bottom: 20px;
+    }
+    #paper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }

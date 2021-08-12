@@ -9,6 +9,7 @@ const end = document.querySelector('#game-end');
 const restart = document.querySelector('#restart');
 const btn = document.querySelector('button');
 let gameon = true;
+
 function computerPlay() {
     let a = Math.floor(Math.random() * 3) + 1;
     if(a == 1) {
@@ -35,6 +36,20 @@ function handleResult(result) {
         compScore.textContent = `Computer: ${computerScore}`;
     }
 }
+function restartGame() {
+    playerScore = 0;
+    computerScore = 0;
+    images.forEach((img => {
+        img.classList.add('active');
+    }));
+    end.textContent = '';
+    restart.textContent = '';
+    res.textContent = '';
+    playScore.textContent = 'Player: 0';
+    compScore.textContent = 'Computer: 0';
+    btn.setAttribute('id', 'hide');
+    gameon = true;
+}
 function endgame(){
     if(playerScore < 5 && computerScore < 5) {
         return;
@@ -50,25 +65,12 @@ function endgame(){
     gameon = false;
     restart.textContent = 'Do you wish to restart?';
     btn.removeAttribute('id');
-    btn.addEventListener('click', () => {
-        playerScore = 0;
-        computerScore = 0;
-        images.forEach((img => {
-            img.classList.add('active');
-        }));
-        end.textContent = '';
-        restart.textContent = '';
-        res.textContent = '';
-        playScore.textContent = 'Player: 0';
-        compScore.textContent = 'Computer: 0';
-        btn.setAttribute('id', 'hide');
-        gameon = true;
-    });
+    btn.addEventListener('click', restartGame);
 }
 function game() {
     let player;
     options.forEach((img) => {
-            img.addEventListener('click', function(e) {
+        img.addEventListener('click', function(e) {
             if(gameon) {
                 let computer = computerPlay();
                 if(e.target.id === 'rock') {
